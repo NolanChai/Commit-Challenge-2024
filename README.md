@@ -6,7 +6,7 @@ Our current participants:
 - Angela
 - Sean (Sheeptester)
 
-# Current To-Dos
+# :memo: Current To-Dos
 Feel free to leave ideas here
 - Tracker to update and list number of daily commits per person
 
