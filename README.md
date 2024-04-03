@@ -5,3 +5,9 @@ Our current participants:
 - Nolan Chai
 - Angela
 - Sean (Sheeptester)
+
+# Current To-Dos
+Feel free to leave ideas here
+- Tracker to update and list number of daily commits per person
+
+# Roadmap
