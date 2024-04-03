@@ -1,3 +1,0 @@
-Hello -Nolan
-
-Hello -Angela
