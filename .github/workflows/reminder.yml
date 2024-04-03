@@ -1,0 +1,15 @@
+on:
+  schedule:
+    # 5 am UTC is 10 pm PDT (summer) or 9 pm PST (winter)
+    - cron: '0 5 * * *'
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for Discord webhook URL
+        run: |
+          echo "discord webhook url is"
+          echo $REMINDER_WEBHOOK
+        env:
+          REMINDER_WEBHOOK: ${{ secrets.REMINDER_WEBHOOK }}
