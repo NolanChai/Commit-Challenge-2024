@@ -21,7 +21,12 @@ jobs:
           echo "hello: $HELLO"
           pwd
           ls -al
-          gh issue comment 1 --body "hi @SheepTester. it's $(date)" && true
+          # gh issue comment 1 --body "hi @SheepTester. it's $(date)" && true
+          # https://stackoverflow.com/a/9849524
+          TZ=America/Los_Angeles
+          SINCE=$(node random-javaProject-LmaoHaha/beginning-of-the-day.javascript)
+          gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "/repos/NolanChai/Commit-Challenge-2024/commits?since=$SINCE" > commits.json
+          node random-javaProject-LmaoHaha/read-commits.javascript
         env:
           REMINDER_WEBHOOK: ${{ secrets.REMINDER_WEBHOOK }}
           # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows

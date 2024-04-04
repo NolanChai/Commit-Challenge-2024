@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Welcome to the annual $\\subseteq$ Commit Challenge 2024! The goal is to make contributions and a commit every day to build something that can (hopefully) be considered meaningful and deployable by the end of the year.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
