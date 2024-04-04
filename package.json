@@ -1,0 +1,15 @@
+{
+  "name": "commit-challenge-2024",
+  "version": "1.0.0",
+  "description": "Welcome to the annual $\\subseteq$ Commit Challenge 2024! The goal is to make contributions and a commit every day to build something that can (hopefully) be considered meaningful and deployable by the end of the year.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^22.6.2",
+    "typescript": "^5.4.3"
+  }
+}
