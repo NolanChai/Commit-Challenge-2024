@@ -18,7 +18,9 @@ jobs:
           echo "discord webhook url is"
           echo $REMINDER_WEBHOOK
           echo "hello: $HELLO"
-          gh issue comment 1 --body "hi @SheepTester. it's $(date)"
+          pwd
+          ls -al
+          gh issue comment 1 --body "hi @SheepTester. it's $(date)" && true
         env:
           REMINDER_WEBHOOK: ${{ secrets.REMINDER_WEBHOOK }}
           # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
