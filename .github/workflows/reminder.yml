@@ -18,8 +18,7 @@ jobs:
         run: |
           echo "do not ping?: $DONT_PING"
           # https://stackoverflow.com/a/9849524
-          TZ=America/Los_Angeles
-          SINCE=$(node random-javaProject-LmaoHaha/beginning-of-the-day.js)
+          SINCE=$(TZ=America/Los_Angeles node random-javaProject-LmaoHaha/beginning-of-the-day.js)
           gh api -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28" "/repos/NolanChai/Commit-Challenge-2024/commits?since=$SINCE" > commits.json
           node random-javaProject-LmaoHaha/read-commits.js || gh issue comment 1 --body "$(cat issuemsg.txt)"
         env:
