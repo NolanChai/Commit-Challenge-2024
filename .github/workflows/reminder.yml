@@ -13,6 +13,7 @@ jobs:
   test_schedule:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Check for Discord webhook URL
         run: |
           echo "discord webhook url is"
