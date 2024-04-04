@@ -6,6 +6,7 @@ Our current participants:
 - Angela
 - Sean (Sheeptester)
 - Molly (mojeanmac)
+- Nick (nick-ls)
 
 # :memo: Current To-Dos
 Feel free to leave ideas here
