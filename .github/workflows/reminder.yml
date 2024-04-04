@@ -27,3 +27,6 @@ jobs:
           # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HELLO: ${{ inputs.hello }}
+    permissions:
+      # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#permissions
+      issues: write
