@@ -8,6 +8,9 @@ Our current participants:
 - Molly (mojeanmac)
 - Nick (nick-ls)
 
+# :exclamation: Rules
+You must commit to main.
+
 # :memo: Current To-Dos
 Feel free to leave ideas here
 - Tracker to update and list number of daily commits per person
