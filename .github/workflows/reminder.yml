@@ -2,6 +2,12 @@ on:
   schedule:
     # 5 am UTC is 10 pm PDT (summer) or 9 pm PST (winter)
     - cron: '0 5 * * *'
+  workflow_dispatch:
+    inputs:
+      hello:
+        description: 'hello lol'
+        required: false
+        type: boolean
 
 jobs:
   test_schedule:
@@ -11,5 +17,10 @@ jobs:
         run: |
           echo "discord webhook url is"
           echo $REMINDER_WEBHOOK
+          echo "hello: $HELLO"
+          gh issue comment 1 --body "hi @SheepTester. it's $(date)"
         env:
           REMINDER_WEBHOOK: ${{ secrets.REMINDER_WEBHOOK }}
+          # https://docs.github.com/en/actions/using-workflows/using-github-cli-in-workflows
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HELLO: ${{ inputs.hello }}
