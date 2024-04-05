@@ -7,6 +7,7 @@ Our current participants:
 - Sean (Sheeptester)
 - Molly (mojeanmac)
 - Nick (nick-ls)
+- Sean (Sean1572)
 
 # :exclamation: Rules
 You must commit to main.
