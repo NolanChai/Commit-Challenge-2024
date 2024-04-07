@@ -8,6 +8,7 @@ Our current participants:
 - [Molly](https://github.com/mojeanmac)
 - [Nick](https://github.com/nick-ls)
 - [Sean](https://github.com/Sean1572)
+- [Marcelo] (https://github.com/dowhep)
 
 # :exclamation: Rules
 You must commit to main.
