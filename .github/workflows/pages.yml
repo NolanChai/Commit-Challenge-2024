@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: GET commit count
         run: |
-         git shortlog --summary --numbered --all --no-merges
+         git shortlog --summary --numbered --all --no-merges >  generate_tracker_html.sh
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4 # or specific "vX.X.X" version tag for this action
