@@ -18,5 +18,5 @@ You must commit to main.
 # :memo: Current To-Dos
 Feel free to leave ideas here
 - [ ] Tracker to update and list number of daily commits per person
-
+- [ ] Finish Image to Ascii thing :) check out [this](https://github.com/NolanChai/Commit-Challenge-2024/blob/main/ascii.html)
 # Roadmap
