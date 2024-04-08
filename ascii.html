@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My cool image to ascii library</title>
+	<style>
+		html,body {
+			margin: 0;
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<script>
+let canvas = document.getElementById("c");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let c = canvas.getContext("2d");
+c.fillStyle = "red";
+
+c.fillRect(0,0,window.innerWidth, window.innerHeight);
+	
+// Let users upload an image
+
+// Apply a reduction of colors to the image to reduce it to 4 colors between black, white, grey, and dark gray (or maybe just do 2 colors, but make edges prominent with a sharpening convolution or something)
+
+// Allow users to choose the size in characters of the outputted image
+// Subsample pixels of the uploaded image to figure out what character (not necessarily just ascii) fits the subsampled region the best
+
+// basically put a bunch of characters on a canvas, gaussian blur them, and see which one looks the most like that part of the image, and then use that character
+
+// this is different than other text to ascii libraries because the other ones only sample the average color in an area, but this one tries to match the shape of the character to the region of the image that it is representing regardless of the output size of the resulting text
+
+// TODO: all of this (feel free to contribute!)
+
+</script>
+</body>
+</html>
