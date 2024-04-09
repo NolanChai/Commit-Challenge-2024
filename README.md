@@ -1,6 +1,7 @@
 # :sparkle: $\subseteq$ Commit Challenge 2024
 Welcome to the annual $\subseteq$ Commit Challenge 2024! The goal is to make contributions and a commit every day to build something that can (hopefully) be considered meaningful and deployable by the end of the year.
-Our pages site is available [here](https://nolanchai.dev/Commit-Challenge-2024/)
+
+Our pages site is available on [GitHub Pages](https://nolanchai.dev/Commit-Challenge-2024/)
 
 Our current participants:
 - [Nolan Chai](https://github.com/NolanChai)
@@ -16,6 +17,6 @@ You must commit to main.
 
 # :memo: Current To-Dos
 Feel free to leave ideas here
-- Tracker to update and list number of daily commits per person
-
+- [ ] Tracker to update and list number of daily commits per person
+- [ ] Finish Image to Ascii thing :) check out [this](https://github.com/NolanChai/Commit-Challenge-2024/blob/main/ascii.html)
 # Roadmap
