@@ -1,5 +1,7 @@
 import fs from 'fs'
 
+const AT = process.env.DONT_PING === 'true' ? '' : '@'
+
 const commits = JSON.parse(fs.readFileSync('commits.json', 'utf-8'))
 console.log(commits)
 
@@ -11,8 +13,6 @@ const everyone = Array.from(
   ([, username]) => username
 )
 const noCommit = everyone.filter(user => !committers.has(user)).sort().map(u => `${AT}${u}`)
-
-const AT = process.env.DONT_PING === 'true' ? '' : '@'
 
 fs.writeFileSync('issuemsg.txt', [
   // `these people have committed already: ${[...committers].join(', ')}`,
