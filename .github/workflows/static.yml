@@ -31,9 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Update leaderboard
-        run: |
-         git shortlog --summary --numbered --all --no-merges >  index.html
+          run: |
+          git shortlog --summary --numbered --all --no-merges >  index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
