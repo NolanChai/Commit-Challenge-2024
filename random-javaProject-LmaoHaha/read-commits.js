@@ -23,5 +23,5 @@ fs.writeFileSync('issuemsg.txt', [
 const BASH_TRUE = 0
 const BASH_FALSE = 1
 
-// Return true iff someone hasn't committed yet
-process.exit(noCommit.length > 0 ? BASH_TRUE : BASH_FALSE)
+// Return true iff everyone already committed
+process.exit(noCommit.length === 0 ? BASH_TRUE : BASH_FALSE)
