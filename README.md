@@ -11,6 +11,7 @@ Our current participants:
 - [Nick](https://github.com/nick-ls)
 - [Sean](https://github.com/Sean1572)
 - [Marcelo](https://github.com/dowhep)
+- [Sam](https://github.com/sprestrelski)
 
 # :exclamation: Rules
 You must commit to main.
