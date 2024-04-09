@@ -13,12 +13,16 @@ Our current participants:
 - [Marcelo](https://github.com/dowhep)
 - [Sam](https://github.com/sprestrelski)
 
-# :exclamation: Rules
+# :exclamation: Rule
 You must commit to main.
 
 # :memo: Current To-Dos
 Feel free to leave ideas here
+- [ ] Create better website so it links together a bunch of our projects here
+      - I'm thinking like Ascii and tracker can be on the same site, so like create a homepage that can link to the indivual projects
 - [ ] Tracker to update and list number of daily commits per person
+  - [ X ] Got it deployed on github pages
+  - [ ] Intergrate into larger webpage  
 - [ ] Finish Image to Ascii thing :) check out [this](https://github.com/NolanChai/Commit-Challenge-2024/blob/main/ascii.html)
 - [ ] Finish gamedev workshop
 # Roadmap
