@@ -35,11 +35,8 @@ jobs:
           fetch-depth: 0
       - name: Update leaderboard
         run: |
-          echo "<html><head><title>Commit Leaderboard</title><style>table { border-collapse: collapse; width: 100%; } th, td { padding: 8px; text-align: left; border-bottom: 1px solid #ddd; } th { background-color: #f2f2f2; }</style></head><body><h2>Commit Leaderboard</h2><table><tr><th>Author</th><th>Commits</th></tr>" > index.html
-          git shortlog --summary --numbered --all --no-merges | awk '{printf "<tr><td>%s</td><td>%s", $1, $2; for(i=3; i<=NF; i++) printf(" %s", $i); printf "</td></tr>"}' >> index.html
-          echo "</table>" >> index.html
-          echo "<img src=\"images/diversity.png\" alt=\"you CAN horse anything\"" >> index.html
-          echo "</body></html>" >> index.html
+          git shortlog --summary --numbered --all --no-merges | awk '{printf "<tr><td>%s</td><td>%s", $1, $2; for(i=3; i<=NF; i++) printf(" %s", $i); printf "</td></tr>"}' > table_content.txt
+          sed -e '/{{commitData}}/ {' -e 'r table_content.txt' -e 'd' -e '}' index.template.html > index.html
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
