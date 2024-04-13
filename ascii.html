@@ -23,7 +23,26 @@ c.fillRect(0,0,window.innerWidth, window.innerHeight);
 	// commit mesage yipppeee!!!!!!!
 	
 // Let users upload an image
+const set = Object.assign
+const elem = document.createElement.bind(document)	
+const label = elem('label')
+	const input = set(elem('input'), {type:'file',accept:'image/*'})
+	label.append('Upload an image: ',input )
+	document.body.append(label)
 
+	input.addEventListener('change', async() => {
+
+		if (input.files.length === 0) return
+		const file = input.files[0]
+
+		const url = URL.createObjectURL(file)
+		const image = new Image()
+		image.src=url
+		await new Promise(resolve => image.onload=resolve)
+		canvas.width = image.width
+		canvas.height = image.height
+		
+	
 // Apply a reduction of colors to the image to reduce it to 4 colors between black, white, grey, and dark gray (or maybe just do 2 colors, but make edges prominent with a sharpening convolution or something)
 
 // Allow users to choose the size in characters of the outputted image
@@ -35,6 +54,7 @@ c.fillRect(0,0,window.innerWidth, window.innerHeight);
 
 // TODO: all of this (feel free to contribute!)
 
+	})
 </script>
 </body>
 </html>
