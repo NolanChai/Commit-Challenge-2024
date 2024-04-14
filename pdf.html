@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>read papers</title>
+    <style>
+        .pdfSelect {
+            margin-top: 10px; 
+        }
+
+        h2 {
+            font-family: "Comic Sans MS", cursive;
+            animation: colorChange 1s infinite alternate;
+        }
+        
+        @keyframes colorChange {
+            0% {
+                color: hotpink;
+            }
+            100% {
+                color: yellow;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>read papers</h2>
+
+<select class="pdfSelect" id="pdfSelect" onchange="changePDF()">
+</select>
+
+<embed id="pdfEmbed" src="" type="application/pdf" width="100%" height="600px" />
+
+<script>
+    window.onload = function() {            
+        // generate pdf selector
+        fetch('pdf_list.txt')
+            .then(response => response.text())
+            .then(data => {
+                const files = data.trim().split('\n');
+                let pdfHTML = '';
+                files.forEach(f => {
+                    var fn = f.split(/[\\/]/);
+                    fn = fn[fn.length - 1].split('.');
+                    fn = fn.slice(0, -1).join('.');
+                    pdfHTML += `<option value="${f}">${fn}</option>`;
+                });
+                document.getElementById('pdfSelect').innerHTML += pdfHTML;
+                document.getElementById('pdfEmbed').src = files[0];
+            })
+            .catch(error => console.error('Error fetching file:', error));
+    };
+
+
+    function changePDF() {
+        var selectBox = document.getElementById("pdfSelect");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        var pdfEmbed = document.getElementById("pdfEmbed");
+        pdfEmbed.src = selectedValue;
+    }
+</script>
+
+</body>
+</html>

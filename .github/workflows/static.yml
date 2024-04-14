@@ -36,6 +36,9 @@ jobs:
       - name: Update leaderboard
         run: |
           git shortlog --summary --numbered --all --no-merges > tables.txt
+      - name: PDF viewer
+        run: |
+          find "mochen lerning/" -name "*.pdf" > pdf_list.txt
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
