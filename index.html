@@ -16,16 +16,41 @@
         th {
             background-color: #f2f2f2;
         }
+
+        .horse-anything {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 <body>
 <h2>Commit Leaderboard</h2>
-<table>
+<table id="commitTable">
     <tr>
         <th>Author</th>
         <th>Commits</th>
     </tr>
-<tr><td>20</td><td>Nolan Chai</td></tr><tr><td>18</td><td>Sean</td></tr><tr><td>6</td><td>Cho Jung (Angela) Tsai</td></tr><tr><td>6</td><td>Sean Perry</td></tr><tr><td>5</td><td>Nick</td></tr><tr><td>4</td><td>Caogang (Marcelo) Shen</td></tr><tr><td>4</td><td>Samantha Prestrelski</td></tr><tr><td>3</td><td>Molly</td></tr><tr><td>3</td><td>cjt002@ucsd.edu</td></tr><tr><td>1</td><td>Marcelo Shen</td></tr><tr><td>1</td><td>Nicholas264</td></tr><tr><td>1</td><td>Nick P</td></tr></table>
-<img src="images/diversity.png" alt="you CAN horse anything">
+</table>
+<img src="images/diversity.png" alt="you CAN horse anything" class="horse-anything">
+
+<script>
+    window.onload = function() {
+        // generate leaderboard table
+        fetch('tables.txt')
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.trim().split('\n');
+                let tableHTML = '';
+                rows.forEach(row => {
+                    const [commits, author] = row.split('\t'); 
+                    tableHTML += `<tr>\n<td>${author}</td>\n<td>${commits}</td>\n</tr>\n`;
+                });
+                document.getElementById('commitTable').innerHTML += tableHTML;
+            })
+            .catch(error => console.error('Error fetching file:', error));
+    };
+
+</script>
+
 </body>
 </html>
