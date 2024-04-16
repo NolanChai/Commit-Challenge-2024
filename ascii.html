@@ -18,6 +18,24 @@
 <body>
 <canvas id="c"></canvas>
 <script>
+
+//Thank you CHATGPT
+function convertToBlackAndWhite(context, x, y, width, height) {
+	var imageData = context.getImageData(x, y, width, height);
+	var data = imageData.data;
+
+	for (var i = 0; i < data.length; i += 4) {
+		// Calculate grayscale value
+		var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+		// Set RGB values to grayscale value
+		data[i] = avg; // Red
+		data[i + 1] = avg; // Green
+		data[i + 2] = avg; // Blue
+	}
+}
+	// Put the modified data back onto the canvas
+	context.putImageData(imageData, x, y);
+
 let canvas = document.getElementById("c");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -46,6 +64,7 @@ const label = elem('label')
 		await new Promise(resolve => image.onload=resolve)
 		canvas.width = image.width
 		canvas.height = image.height
+		convertToBlackAndWhite(c, 0, 0, canvas.width, canvas.height);
 
 // my commit - hi
 	
