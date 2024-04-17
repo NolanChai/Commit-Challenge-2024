@@ -24,5 +24,5 @@ Feel free to leave ideas here
   - [X] Got it deployed on github pages
   - [X] Integrate into larger webpage  
 - [ ] Finish Image to Ascii thing :) check out [this](https://github.com/NolanChai/Commit-Challenge-2024/blob/main/ascii.html)
-- [ ] Finish gamedev workshop
+- [X] Finish gamedev workshop
 # Roadmap
