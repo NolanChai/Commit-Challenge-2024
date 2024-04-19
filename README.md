@@ -4,7 +4,7 @@ Welcome to the annual $\subseteq$ Commit Challenge 2024! The goal is to make con
 Our pages site is available on [GitHub Pages](https://nolanchai.dev/Commit-Challenge-2024/)
 
 Our current participants:
-- [Nolan Chai](https://github.com/NolanChai)
+- [Nolan](https://github.com/NolanChai)
 - [Angela](https://github.com/angelatsai1214)
 - [Sean](https://github.com/SheepTester)
 - [Molly](https://github.com/mojeanmac)
