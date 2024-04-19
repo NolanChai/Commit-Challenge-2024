@@ -19,7 +19,7 @@
         font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
         
     }
-    div {
+    main {
         width: 600px;
         margin: 5em auto;
         padding: 2em;
@@ -41,6 +41,29 @@
       audio {
         width: 100%;
       }
+
+        textarea,
+        input,
+        select,
+        button {
+            font: inherit;
+            color: inherit;
+        }
+        button:not(:disabled) {
+            cursor: pointer;
+        }
+
+        textarea {
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.5);
+        }
+        button {
+             background: #2196F3;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 40px;
+        }
     </style>    
 </head>
 
@@ -107,7 +130,7 @@ const text = formData.get('text')
   .then(URL.createObjectURL)
   .then(url => {
   const audio = new Audio()
-audio.src = URL.createObjectURL(blob)
+audio.src = url
 audio.controls = true
     
 document.getElementById('main').append(audio)
