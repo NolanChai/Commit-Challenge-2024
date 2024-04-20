@@ -76,6 +76,11 @@
         h1,p{
             margin:0;
         }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     </style>    
 </head>
 
@@ -121,7 +126,155 @@ Emily Nguyen (Emily nWIN)
 
   <form action="javascript:" onsubmit="onSubmit(new FormData(this))">
   <textarea placeholder="I could say anything!" name="text">I love Chancellor Pradeep Khosla! 我在北京</textarea>
-    
+    <fieldset>
+        <legend>Voice</legend>
+        <!-- https://docs.wellsaidlabs.com/reference/available-voice-avatars -->
+        <label><input type="radio" name="speaker_id" value="3"> Alana B. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="4"> Ramona J. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="5"> Ramona J. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="7"> Wade C. (Narration) Now ID 30</label>
+<label><input type="radio" name="speaker_id" value="8"> Sofia H. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="10"> Vanessa N. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="11"> Isabel V. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="12"> Ava M. (Narration) Now ID 31</label>
+<label><input type="radio" name="speaker_id" value="13"> Jeremy G. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="14"> Nicole L. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="15"> Paige L. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="16"> Tobin A. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="17"> Kai M. (Narration) Now ID 32</label>
+<label><input type="radio" name="speaker_id" value="18"> Tristan F. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="19"> Patrick K. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="20"> Sofia H. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="21"> Damian P. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="22"> Jodi P. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="23"> Lee M. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="24"> Selene R. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="26"> Wade C. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="27"> Joe F. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="28"> Joe F. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="29"> Garry J. (Character)</label>
+<label><input type="radio" name="speaker_id" value="30"> Wade C. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="31"> Ava M. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="33"> Jude D. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="32"> Kai M. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="34"> Eric S. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="35"> Chase J. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="37"> Steve B. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="38"> Bella B. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="39"> Tilda C. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="40"> Charlie Z. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="41"> Paul B. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="42"> Sofia H. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="43"> Ava M. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="44"> Kai M. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="45"> Nicole L. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="46"> Wade C. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="47"> Patrick K. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="48"> Vanessa N. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="49"> Gia V. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="50"> Antony A. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="51"> Jodi P. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="52"> Raine B. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="53"> Owen C. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="54"> Zach E. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="55"> Genevieve M. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="56"> Jarvis H. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="57"> Theo K. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="58"> James B. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="59"> Terra G. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="60"> Philip J. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="61"> Marcus G. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="62"> Jordan T. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="63"> Fiona H. (Narration, UK)</label>
+<label><input type="radio" name="speaker_id" value="65"> Donna W. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="66"> Greg G. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="67"> Zoey O. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="68"> Kari N. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="69"> Diarmid C. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="71"> Alan T. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="72"> Ava M. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="73"> Tobin A. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="75"> Ben D. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="76"> Michael V. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="77"> Cameron S. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="78"> Paula R. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="79"> Bella B. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="80"> Marcus G. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="81"> Jordan T (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="82"> Jodi P. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="83"> Diarmid C. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="84"> Jarvis H. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="85"> Jarvis H. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="86"> Gia V. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="87"> Gia V. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="88"> Owen C. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="89"> Owen C. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="90"> Philip J (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="91"> Genevieve M. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="92"> Antony A. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="93"> Bella B. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="94"> Eric S. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="95"> Greg G. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="96"> Jensen X. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="97"> Jack C. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="98"> Oliver S. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="99"> Hannah A (Narration)</label>
+<label><input type="radio" name="speaker_id" value="100"> Lorenzo D. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="101"> Lulu G. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="102"> Abbi D. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="103"> Fiona H. (Narration, IE)</label>
+<label><input type="radio" name="speaker_id" value="104"> Shelby D. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="105"> Se'von M. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="106"> Jimmy J. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="107"> Jay S. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="108"> Selene R. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="109"> Issa B. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="110"> Lyric K. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="111"> Ali P. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="112"> Aaron G. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="113"> Jordan T. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="114"> Greg G. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="115"> Genevieve M. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="116"> Marcus G. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="117"> Nicole L. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="118"> Philip J. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="119"> Vanessa N. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="120"> Diarmid C. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="121"> James B. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="122"> Lee M. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="123"> Tilda C. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="124"> Kari N. (Character)</label>
+<label><input type="radio" name="speaker_id" value="125"> Damian P. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="126"> Charlie Z. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="127"> Tilda C. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="128"> Zach E. (Narration)</label>
+<label><input type="radio" name="speaker_id" value="129"> Paula R. (Promo)</label>
+<label><input type="radio" name="speaker_id" value="130"> Alana B. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="131"> Paige L. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="132"> Fiona H. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="133"> Ramona J. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="135"> Donna W. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="136"> Terra G. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="137"> Ben D. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="138"> Jeremy G. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="139"> Joe F. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="140"> Jude D. (Conversational)</label>
+<label><input type="radio" name="speaker_id" value="141"> Abbi_D (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="142"> Antony_A (Promotional) </label>
+<label><input type="radio" name="speaker_id" value="143"> Fiona_H (Promotional) </label>
+<label><input type="radio" name="speaker_id" value="144"> Hannah_A (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="145"> Issa_B (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="146"> Jack_C (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="147"> Jay_S (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="148"> Jay_S (Promotional) </label>
+<label><input type="radio" name="speaker_id" value="149"> Jimmy_J (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="150"> Lorenzo_D (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="151"> Lulu_G (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="152"> Oliver_S (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="153"> Shelby_D (Conversational) </label>
+<label><input type="radio" name="speaker_id" value="154"> Shelby_D (Promotional) </label>
+<label><input type="radio" name="speaker_id" value="155"> Terra_G (Promotional) </label>
+    </fieldset>
     <button>Speak</button>
   </form>
 </main>
@@ -130,7 +283,7 @@ Emily Nguyen (Emily nWIN)
 function onSubmit (formData) {
 const text = formData.get('text')
   // 18 or 65
-  const speaker_id = 18
+  const speaker_id = +formData.get('speaker_id')
   fetch("https://api.wellsaidlabs.com/v1/tts/stream", {
   "headers": {
     "content-type": "application/json",
