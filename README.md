@@ -25,4 +25,6 @@ Feel free to leave ideas here
   - [X] Integrate into larger webpage  
 - [ ] Finish Image to Ascii thing :) check out [this](https://github.com/NolanChai/Commit-Challenge-2024/blob/main/ascii.html)
 - [X] Finish gamedev workshop
+- [ ] Make the fish move around in the ocean
+- [ ] fix leaderboard so there aren't duplicate ppl due to weird github username issues
 # Roadmap
