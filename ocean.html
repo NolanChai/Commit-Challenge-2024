@@ -15,6 +15,17 @@
             width: 100%;
             background-color: gold;
         }
+        @keyframes leftright {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: calc(100% - 400px);
+            }
+        }
+        #crab {
+            animation: leftright 2s alternate infinite linear;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +38,7 @@
         <img src="./images/shork.gif"></img>
     </div>
     <div class="sand">
-        <img src="./images/crab.gif" height="100px"></img>
+        <img src="./images/crab.gif" height="100px" id="crab"></img>
     </div>
 </body>
 
