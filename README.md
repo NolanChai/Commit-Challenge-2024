@@ -1,6 +1,8 @@
 # :sparkle: $\subseteq$ Commit Challenge 2024
 Welcome to the annual $\subseteq$ Commit Challenge 2024! The goal is to make contributions and a commit every day to build something that can (hopefully) be considered meaningful and deployable by the end of the year.
 
+![animated svg](./animation.svg)
+
 Our pages site is available on [GitHub Pages](https://nolanchai.dev/Commit-Challenge-2024/)
 
 Our current participants:
@@ -22,7 +24,7 @@ Feel free to leave ideas here
 - [ ] Create persistent navbar
 - [X] Tracker to update and list number of daily commits per person
   - [X] Got it deployed on github pages
-  - [X] Integrate into larger webpage  
+  - [X] Integrate into larger webpage
 - [ ] Finish Image to Ascii thing :) check out [this](https://github.com/NolanChai/Commit-Challenge-2024/blob/main/ascii.html)
 - [X] Finish gamedev workshop
 - [ ] ocean
