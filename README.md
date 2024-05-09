@@ -13,7 +13,7 @@ Our current participants:
 - [Nick](https://github.com/nick-ls)
 - [Sean](https://github.com/Sean1572)
 - [Marcelo](https://github.com/dowhep)
-- [Sam](https://github.com/sprestrelski)
+- [Sam](https://github.com/sprestrelski) :fish:
 
 # :exclamation: Rule
 You must commit to main.
