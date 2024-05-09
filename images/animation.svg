@@ -11,8 +11,8 @@
       60% {fill: #3b82f6}
       80% { fill: #d946ef}
     }
-    #fish {
-animation: swim 1s infinite alternate ease-in-out;
+    #fish-outer {
+animation: swim 3.1415926535897s infinite alternate ease-in-out;
     }
     @keyframes swim {
       from {
@@ -23,9 +23,18 @@ animation: swim 1s infinite alternate ease-in-out;
     ;
     }
     }
+
+    #fish {
+      animation: side-to-side 1s infinite alternate ease-in-out;
+    }
+    @keyframes side-to-side {
+0% { transform: translateX(0); }
+    100% { transform: translateX(60px); }
+    }
   </style>
 
   <!-- 🐟 https://github.com/microsoft/fluentui-emoji/blob/main/assets/Fish/Color/fish_color.svg -->
+  <g id="fish-outer">
   <g id="fish">
 <circle cx="3.05469" cy="19.9453" r="1.05469" fill="url(#paint0_radial_28327_5956)"/>
 <circle cx="3.05469" cy="17.9453" r="1.05469" fill="url(#paint1_radial_28327_5956)"/>
@@ -61,6 +70,7 @@ animation: swim 1s infinite alternate ease-in-out;
 <path d="M17.7502 10.6875C19.9593 10.6875 21.7502 8.89664 21.7502 6.6875L21.7502 6.35937C21.7502 6.08323 21.5263 5.85937 21.2502 5.85937L16.1092 5.85937C13.9001 5.85937 12.1092 7.65024 12.1092 9.85937L12.1092 10.6875L17.7502 10.6875Z" fill="url(#paint23_linear_28327_5956)"/>
 <path d="M17.7502 10.6875C19.9593 10.6875 21.7502 8.89664 21.7502 6.6875L21.7502 6.35937C21.7502 6.08323 21.5263 5.85937 21.2502 5.85937L16.1092 5.85937C13.9001 5.85937 12.1092 7.65024 12.1092 9.85937L12.1092 10.6875L17.7502 10.6875Z" fill="url(#paint24_radial_28327_5956)"/>
   </g>
+    </g>
 <defs>
 <filter id="filter0_ii_28327_5956" x="2.5" y="10.1875" width="22.5" height="17.8125" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
