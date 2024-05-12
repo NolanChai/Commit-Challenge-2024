@@ -34,13 +34,12 @@ animation: swim 3.1415926535897s infinite alternate ease-in-out;
 
     #fishflip {
     transform-origin: 16px 16px;
-      animation: flip 2s 0.5s infinite;
+      animation: flip 2s 0.5s infinite backwards;
     }
     @keyframes flip {
-20% { transform: scaleX(1); }
-30% { transform: scaleX(-1); }
-    70% { transform: scaleX(-1); }
-    80% { transform: scaleX(1); }
+      0%, 15% { transform: scaleX(-1); }
+      35%, 65% { transform: scaleX(1); }
+      75% , 100% { transform: scaleX(-1); }
     }
 
   </style>
