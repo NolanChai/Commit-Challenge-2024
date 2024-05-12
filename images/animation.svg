@@ -33,7 +33,7 @@ animation: swim 3.1415926535897s infinite alternate ease-in-out;
     }
 
     #fishflip {
-      transform-origin: center;
+    transform-origin: 16px 16px;
       animation: flip 2s 0.5s infinite;
     }
     @keyframes flip {
@@ -45,7 +45,7 @@ animation: swim 3.1415926535897s infinite alternate ease-in-out;
 
   </style>
 
-  <!-- 🐟 https://github.com/microsoft/fluentui-emoji/blob/main/assets/Fish/Color/fish_color.svg -->
+  <!-- 🐟 https://github.com/microsoft/fluentui-emoji/blob/main/assets/Fish/Color/fish_color.svg (32 by 32) -->
   <g id="fish-outer">
   <g id="fish">
   <g id="fishflip">
