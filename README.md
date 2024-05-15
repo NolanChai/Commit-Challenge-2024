@@ -16,7 +16,7 @@ Our current participants:
 - [Sam](https://github.com/sprestrelski) :fish:
 
 # :exclamation: Rule
-You must commit to main.
+You must comit to main.
 
 # :memo: Current To-Dos
 Feel free to leave ideas here
