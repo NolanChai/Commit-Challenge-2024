@@ -30,5 +30,5 @@ Feel free to leave ideas here
 - [ ] ocean
   - [ ] make the fish move around in the ocean
   - [ ] add seaweed and dots in the sand
-- [ ] fix leaderboard so there aren't duplicate ppl due to weird github username issues
+- [X] fix leaderboard so there aren't duplicate ppl due to weird github username issues
 # Roadmap
