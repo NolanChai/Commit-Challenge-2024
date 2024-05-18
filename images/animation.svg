@@ -12,7 +12,7 @@
       80% { fill: #d946ef}
     }
     #fish-outer {
-animation: swim 3.1415926535897s infinite alternate ease-in-out;
+animation: swim 22.729628s infinite alternate ease-in-out;
     }
     @keyframes swim {
       from {
@@ -25,7 +25,7 @@ animation: swim 3.1415926535897s infinite alternate ease-in-out;
     }
 
     #fish {
-      animation: side-to-side 1s infinite alternate ease-in-out;
+      animation: side-to-side 4s infinite alternate ease-in-out;
     }
     @keyframes side-to-side {
 0% { transform: translateX(0); }
@@ -34,12 +34,12 @@ animation: swim 3.1415926535897s infinite alternate ease-in-out;
 
     #fishflip {
     transform-origin: 16px 16px;
-      animation: flip 2s 0.5s infinite backwards;
+      animation: flip 8s 2s infinite backwards;
     }
     @keyframes flip {
-      0%, 15% { transform: scaleX(-1); }
-      35%, 65% { transform: scaleX(1); }
-      75% , 100% { transform: scaleX(-1); }
+      0%, 20% { transform: scaleX(-1); }
+      30%, 70% { transform: scaleX(1); }
+      80% , 100% { transform: scaleX(-1); }
     }
 
   </style>
