@@ -1,8 +1,8 @@
-
-
+<label>
+audio URL;
 <input type=url id=url value="violin-screech-sound-effect-made-with-Voicemod.mp3" name=audio>
 
-
+</label>
 <button style="font-size: 50px" id=play>play sound</button>
 
 <script>
@@ -55,11 +55,14 @@ const errorWindow=document. body
 
 	play.onclick=e=>{
 		a = new Audio(url.value)
+		a.src=url. value
 		a.onload=()=>{
 			alert('a')
 			a.play()
 		}
 a.onerror=(e)=> handleError(e.reason)
+		a. controls=true
+		document. body. append (a)
 	}
 
 </script>
