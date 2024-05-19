@@ -58,7 +58,10 @@ const errorWindow=document. body
 recycle={}
 	play.onclick=e=>{
 		const u=url. value
-		
+		play(u)
+	}
+
+		function play (u){
 		recycle [u]??=new Set()
 
 const available = [...recycle[u]][0]
@@ -70,8 +73,8 @@ available. currentTime=0
 			return
 		}
 		
-	const	a = new Audio(url.value)
-		a.src=url. value
+	const	a = new Audio(u)
+		a.src=u//rl. value
 		a.onload=()=>{
 			alert('a')
 			a.play()
