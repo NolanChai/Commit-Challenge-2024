@@ -1,3 +1,6 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 <label>
 audio URL;
 <input type=url id=url value="violin-screech-sound-effect-made-with-Voicemod.mp3" name=audio>
@@ -63,6 +66,7 @@ const errorWindow=document. body
 a.onerror=(e)=> handleError(e.reason)
 		a. controls=true
 		document. body. append (a)
+		a.play()
 	}
 
 </script>
