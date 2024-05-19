@@ -23,9 +23,14 @@
 			return String(error);
 		}
 	}
+	</script>
+<script>
 const errorWindow=document. body
 	let visible = false;
 	const log = document.createElement("pre");
+	</script>
+<script>
+
 	function handleError(error) {
 		log.textContent += displayError(error) + "\n";
 		if (!visible) {
@@ -35,6 +40,9 @@ const errorWindow=document. body
 		}
 	}
 
+	</script>
+<script>
+
 	window.addEventListener("error", (e) => {
 		handleError(e.error);
 	});
@@ -42,14 +50,16 @@ const errorWindow=document. body
 		handleError(e.reason);
 	});
 
-	
+</script>
+<script>
 
 	play.onclick=e=>{
 		a = new Audio(url.value)
 		a.onload=()=>{
+			alert('a')
 			a.play()
 		}
-
+a.onerror=(e)=> handleError(e.reason)
 	}
 
 </script>
