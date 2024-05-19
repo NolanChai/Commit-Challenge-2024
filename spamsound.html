@@ -55,8 +55,20 @@ const errorWindow=document. body
 
 </script>
 <script>
-
+recycle={}
 	play.onclick=e=>{
+		const u=url. value
+		
+		recycle [u]??=[]
+
+const available = recycle[u].pop()
+
+		if (available) {
+available. currentTime=0
+			available. play()
+			return
+		}
+		
 		a = new Audio(url.value)
 		a.src=url. value
 		a.onload=()=>{
@@ -67,6 +79,9 @@ a.onerror=(e)=> handleError(e.reason)
 		a. controls=true
 		document. body. append (a)
 		a.play()
+		a.onended=()=>{
+			recycle[u]. unshift(a)
+		}
 	}
 
 </script>
