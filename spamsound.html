@@ -59,11 +59,12 @@ recycle={}
 	play.onclick=e=>{
 		const u=url. value
 		
-		recycle [u]??=[]
+		recycle [u]??=new Set()
 
-const available = recycle[u].pop()
-
+const available = [...recycle[u]][0]
+		
 		if (available) {
+			recycle[u]. delete(available)
 available. currentTime=0
 			available. play()
 			return
@@ -80,7 +81,7 @@ a.onerror=(e)=> handleError(e.reason)
 		document. body. append (a)
 		a.play()
 		a.onended=()=>{
-			recycle[u]. unshift(a)
+			recycle[u]. add(a)
 		}
 	}
 
