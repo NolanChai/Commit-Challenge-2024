@@ -86,9 +86,9 @@
                         map.set(n_author, (map.get(n_author) || 0) + parseInt(commits));
                     });
                     let tableHTML = '';
-
+                    const sortedMap = new Map([...map.entries()].sort((a, b) => b[1] - a[1]));
                     // generate table html
-                    map.forEach((commits, author) => {
+                    sortedMap.forEach((commits, author) => {
                         tableHTML += `<tr>\n<td>${author}</td>\n<td>${commits}</td>\n</tr>\n`;
                     });
                     document.getElementById('commitTable').innerHTML += tableHTML;
