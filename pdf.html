@@ -54,7 +54,7 @@
         var selectBox = document.getElementById("pdfSelect");
         var selectedValue = selectBox.options[selectBox.selectedIndex].value;
         var pdfEmbed = document.getElementById("pdfEmbed");
-        pdfEmbed.src = selectedValue;
+        pdfEmbed.src = DOMPurify.sanitize(selectedValue);;
     }
 </script>
 
