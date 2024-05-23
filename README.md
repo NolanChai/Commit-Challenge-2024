@@ -14,7 +14,7 @@ Our current participants:
 - [Sean](https://github.com/Sean1572)
 - [Marcelo](https://github.com/dowhep)
 - [Sam](https://github.com/sprestrelski) :fish:
-- [3dcantaloupe](https://github.com/3dcantaloupe) :cantaloupe:
+- [3dcantaloupe](https://github.com/3dcantaloupe) 🍈
 
 # :exclamation: Rule
 You must comit to main.
