@@ -3,8 +3,6 @@ Welcome to the annual $\subseteq$ Commit Challenge 2024! The goal is to make con
 
 ![animated svg](./images/animation.svg)
 
-![someone removed the Marcelo nodding gif! please add it back](images/marcelo_nod.gif)
-
 Our pages site is available on [GitHub Pages](https://nolanchai.dev/Commit-Challenge-2024/)
 
 Our current participants:
