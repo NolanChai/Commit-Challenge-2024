@@ -1,0 +1,96 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<label>
+<input type=url id=url value="violin-screech-sound-effect-made-with-Voicemod.mp3" name=audio>
+
+</label>
+<button style="font-size: 50px" id=play>play sound</button>
+
+<script>
+
+	/**
+ * Listens for errors and displays them on screen when they happen.
+ *
+ * @returns A function you can use to report errors.
+ */
+//export function listenErrors(errorWindow){
+	function displayError(error) {
+		if (error instanceof Error) {
+			return error.stack ?? `${error.name}: ${error.message}`;
+		}
+		try {
+			return JSON.stringify(error);
+		} catch {
+			return String(error);
+		}
+	}
+	</script>
+<script>
+const errorWindow=document. body
+	let visible = false;
+	const log = document.createElement("pre");
+	</script>
+<script>
+
+	function handleError(error) {
+		log.textContent += displayError(error) + "\n";
+		if (!visible) {
+			visible = true;
+			errorWindow.append(log);
+			errorWindow.showModal();
+		}
+	}
+
+	</script>
+<script>
+
+	window.addEventListener("error", (e) => {
+		handleError(e.error);
+	});
+	window.addEventListener("unhandledrejection", (e) => {
+		handleError(e.reason);
+	});
+
+</script>
+<script>
+recycle={}
+	play.onclick=e=>{
+		const u=url. value
+		playy(u)
+	}
+
+		function playy (u){
+		recycle [u]??=new Set()
+
+const available = [...recycle[u]][0]
+		
+		if (available) {
+			recycle[u]. delete(available)
+available. currentTime=0
+			available. play()
+			return
+		}
+		
+	const	a = new Audio(u)
+		a.src=u//rl. value
+		a.onload=()=>{
+			alert('a')
+			a.play()
+		}
+a.onerror=(e)=> handleError(e.reason)
+		a. controls=true
+		document. body. append (a)
+		a.play()
+		a.onended=()=>{
+			recycle[u]. add(a)
+		}
+	}
+
+</script>
+
+<button onclick="playy('violin-screech-sound-effect-made-with-Voicemod.mp3')" style="font-size: 40px">🎻</button>
+<button onclick="playy('vine-boom.mp3')" style="font-size: 40px">🗿</button>
+<button onclick="playy('huh.mp3')" style="font-size: 30px">huh</button>
+<button onclick="playy('hello.mp3')" style="font-size: 40px">🦜</button> 
+<button onclick="playy('mcdonalds.mp3')" style="font-size: 40px">〽️</button>

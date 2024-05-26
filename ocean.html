@@ -8,10 +8,42 @@
         body {
             background-color: blue;
         }
+        .sand {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: gold;
+            background-image: radial-gradient(circle at 20% 20%, #3106 0%, transparent 6%), radial-gradient(circle at 80% 50%, #3106 0%, transparent 6%), radial-gradient(circle at 90% 90%, #3103 0%, transparent 6%), radial-gradient(circle at 10% 70%, #3106 0%, transparent 6%);
+              background-size: 40px 40px;
+        }
+        @keyframes leftright {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: calc(100% - 400px);
+            }
+        }
+        #crab {
+            animation: leftright 2s alternate infinite linear;
+        }
     </style>
 </head>
 <body>
-    <img src="./images/shrimp.gif"></img>
-    <img src="./images/gfish.gif"></img>
+    <div id="ocean">
+        <img src="./images/shrimp.gif"></img>
+        <img src="./images/gfish.gif"></img>
+        <img src="./images/bigfush.gif"></img>
+        <br>
+        <img src="./images/swimming.gif"></img>
+        <img src="./images/shork.gif"></img>
+        <br>
+        <img src="./images/cone_snail.png"></img>
+    </div>
+    <div class="sand">
+        <img src="./images/crab.gif" height="100px" id="crab"></img>
+    </div>
 </body>
+
 </html>

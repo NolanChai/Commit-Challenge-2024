@@ -3,6 +3,25 @@
     <title>Commit Leaderboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                color-scheme: dark;
+            }
+        }
+
+        body {
+            margin: 20px;
+        }
+
+        nav {
+            margin: -20px;
+            margin-bottom: 0;
+            padding: 20px;
+            position: sticky;
+            top:0;
+            background: aquamarine;
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -11,11 +30,11 @@
         th, td {
             padding: 8px;
             text-align: left;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid color-mix(in srgb, currentColor 13%, transparent);
         }
 
         th {
-            background-color: #f2f2f2;
+            background-color: color-mix(in srgb, currentColor 5%, transparent);
         }
 
         .horse-anything {
@@ -34,7 +53,9 @@
         &middot;
         <a href="ucsd-tts">UCSD TTS</a>
         &middot;
-        <a href="ocean">Ocean</a>
+        <a href="ocean">ocean</a>
+        &middot;
+        <a href="spamsound">spamsound</a>
     </nav>
 <h2>Commit Leaderboard</h2>
 <table id="commitTable">
@@ -47,21 +68,46 @@
 
 <script>
     window.onload = function() {
-        // generate leaderboard table
-        fetch('tables.txt')
-            .then(response => response.text())
-            .then(data => {
-                const rows = data.trim().split('\n');
-                let tableHTML = '';
-                rows.forEach(row => {
-                    const [commits, author] = row.split('\t'); 
-                    tableHTML += `<tr>\n<td>${author}</td>\n<td>${commits}</td>\n</tr>\n`;
-                });
-                document.getElementById('commitTable').innerHTML += tableHTML;
+        fetch('alias.txt')
+            .then(response => response.json())
+            .then(mappings => {
+            // generate leaderboard table
+            fetch('tables.txt')
+                .then(response => response.text())
+                .then(data => {
+                    // remove strange characters
+                    const regex = /[^\t\s\w\u1000]/g;
+                    let rows = data.replace(regex,'').split('\n');
+                    rows = rows.map(s => s.trim()).filter(Boolean);
+
+                    // map people to their usernames
+                    let map = new Map();
+                    rows.forEach(row => {
+                        let [commits, author] = row.split('\t');
+                        const n_author = normalizeAuthor(author, mappings);
+                        map.set(n_author, (map.get(n_author) || 0) + parseInt(commits));
+                    });
+                    let tableHTML = '';
+                    const sortedMap = new Map([...map.entries()].sort((a, b) => b[1] - a[1]));
+                    // generate table html
+                    sortedMap.forEach((commits, author) => {
+                        tableHTML += `<tr>\n<td>${author}</td>\n<td>${commits}</td>\n</tr>\n`;
+                    });
+                    document.getElementById('commitTable').innerHTML += tableHTML;
+                })
+                .catch(error => console.error('Error fetching file:', error));
             })
-            .catch(error => console.error('Error fetching file:', error));
+        .catch(error => console.error('Error fetching alias mappings:', error));
     };
 
+    function normalizeAuthor(author, mappings) {
+        for (const [name, variations] of Object.entries(mappings)) {
+            if (variations.includes(author)) {
+                return name;
+            }
+        }
+        return author;
+    }
 </script>
 
 </body>

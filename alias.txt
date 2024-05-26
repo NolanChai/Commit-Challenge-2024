@@ -1,0 +1,6 @@
+{
+    "Caogang (Marcelo) Shen": ["Caogang (Marcelo) Shen", "Caogang Marcelo Shen", "Marcelo Shen"],
+    "Cho Jung (Angela) Tsai": ["Cho Jung (Angela) Tsai", "Cho Jung Angela Tsai", "cjt002ucsdedu"],
+    "Nick": ["Nick", "Nicholas264", "Nick P"],
+    "Molly MacLaren": ["Molly MacLaren", "Molly"]
+}

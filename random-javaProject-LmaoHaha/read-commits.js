@@ -17,7 +17,7 @@ const noCommit = everyone.filter(user => !committers.has(user)).sort().map(u => 
 fs.writeFileSync('issuemsg.txt', [
   // `these people have committed already: ${[...committers].join(', ')}`,
   // `these people are in the repo: ${everyone.join(', ')}`,
-  `these people havent committed yet: ${noCommit.join(', ')} 😡 go commit now!!`
+  `these people havent committed yet: ${noCommit.join(', ')} 😡 go commit now!! pws uwu`
 ].join('\n\n'))
 
 const BASH_TRUE = 0
