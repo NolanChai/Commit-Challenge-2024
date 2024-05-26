@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	
+</head>
+<body>
 	<title>My cool image to ascii library</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!-- https://www.w3schools.com/howto/howto_html_file_upload_button.asp -->
 	<form>
 		<input type="file" id="file_upload" name="filename">
 		<input type="submit">
-	  </form>
+	</form>
+	<p> there should be a canvas below this</p>
 	<style>
 		html,body {
 			margin: 0;
@@ -15,72 +19,59 @@
 			width: 100%;
 		}
 	</style>
-</head>
-<body>
-<canvas id="c"></canvas>
-<script>
-
-//Thank you CHATGPT
-function convertToBlackAndWhite(context, x, y, width, height) {
-	var imageData = context.getImageData(x, y, width, height);
-	var data = imageData.data;
-
-	for (var i = 0; i < data.length; i += 4) {
-		// Calculate grayscale value
-		var avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
-		// Set RGB values to grayscale value
-		data[i] = avg; // Red
-		data[i + 1] = avg; // Green
-		data[i + 2] = avg; // Blue
-	}
-}
-	// Put the modified data back onto the canvas
-	context.putImageData(imageData, x, y);
-
-let canvas = document.getElementById("c");
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-let c = canvas.getContext("2d");
-c.fillStyle = "red";
-
-c.fillRect(0,0,window.innerWidth, window.innerHeight);
-	// commit mesage yipppeee!!!!!!!
 	
-// Let users upload an image
-const set = Object.assign
-const elem = document.createElement.bind(document)	
-const label = elem('label')
-	const input = set(elem('input'), {type:'file',accept:'image/*'})
-	label.append('Upload an image: ',input )
-	document.body.append(label)
+	<canvas id="c" width="300" height="150"></canvas>
 
-	input.addEventListener('change', async() => {
+	<script>
 
-		if (input.files.length === 0) return
-		const file = input.files[0]
+		//Thank you CHATGPT
+		function convertToBlackAndWhite(context, x, y, width, height) {
+			console.log("pokemon grey")
+			var imageData = context.getImageData(x, y, width, height);
+		
+			for (var i = 0; i < imageData.data.length; i += 4) {
+				// Calculate grayscale value
+				var avg = (imageData.data[i] + imageData.data[i + 1] + imageData.data[i + 2]) / 3;
+				// Set RGB values to grayscale value
+				imageData.data[i] = avg; // Red
+				imageData.data[i + 1] = avg; // Green
+				imageData.data[i + 2] = avg; // Blue
+			}
 
-		const url = URL.createObjectURL(file)
-		const image = new Image()
-		image.src=url
-		await new Promise(resolve => image.onload=resolve)
-		canvas.width = image.width
-		canvas.height = image.height
-		convertToBlackAndWhite(c, 0, 0, canvas.width, canvas.height);
+			console.log(imageData)
+			
+			// Put the modified data back onto the canvas
+			context.putImageData(imageData, 0, 0, 0, 0, imageData.width, imageData.height);
+		}
+		// Let users upload an image
+		const input = document.getElementById("file_upload");
 
-// my commit - hi
+		input.addEventListener('change', async() => {
+			let canvas = document.getElementById("c");
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+			let c = canvas.getContext("2d");
+			console.log(c)
+			//c.fillStyle = "red";
+			
+			c.fillRect(0,0,window.innerWidth, window.innerHeight);
+				// commit mesage yipppeee!!!!!!!
+				
+			
+
+			if (input.files.length === 0) return
+			const file = input.files[0]
 	
-// Apply a reduction of colors to the image to reduce it to 4 colors between black, white, grey, and dark gray (or maybe just do 2 colors, but make edges prominent with a sharpening convolution or something)
-
-// Allow users to choose the size in characters of the outputted image
-// Subsample pixels of the uploaded image to figure out what character (not necessarily just ascii) fits the subsampled region the best
-
-// basically put a bunch of characters on a canvas, gaussian blur them, and see which one looks the most like that part of the image, and then use that character
-
-// this is different than other text to ascii libraries because the other ones only sample the average color in an area, but this one tries to match the shape of the character to the region of the image that it is representing regardless of the output size of the resulting text
-
-// TODO: all of this (feel free to contribute!)
-
-	})
-</script>
+			const url = URL.createObjectURL(file)
+			const image = new Image()
+			image.src=url
+			await new Promise(resolve => image.onload=resolve)
+			console.log(image, image.width, image.height)
+			// canvas.width = image.width
+			// canvas.height = image.height
+			c.drawImage(image, 0, 0);
+			convertToBlackAndWhite(c, 0, 0, canvas.width, canvas.height);
+		})
+	</script>
 </body>
 </html>
