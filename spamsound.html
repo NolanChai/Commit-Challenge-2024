@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <label>
-<input type=url id=url value="violin-screech-sound-effect-made-with-Voicemod.mp3" name=audio>
+<input type=url id=url value="audio/violin-screech-sound-effect-made-with-Voicemod.mp3" name=audio>
 
 </label>
 <button style="font-size: 50px" id=play>play sound</button>
@@ -79,7 +79,7 @@ available. currentTime=0
 			a.play()
 		}
 a.onerror=(e)=> handleError(e.reason)
-		a. controls=true
+		a. controls=false
 		document. body. append (a)
 		a.play()
 		a.onended=()=>{
@@ -89,8 +89,8 @@ a.onerror=(e)=> handleError(e.reason)
 
 </script>
 
-<button onclick="playy('violin-screech-sound-effect-made-with-Voicemod.mp3')" style="font-size: 40px">🎻</button>
-<button onclick="playy('vine-boom.mp3')" style="font-size: 40px">🗿</button>
-<button onclick="playy('huh.mp3')" style="font-size: 30px">huh</button>
-<button onclick="playy('hello.mp3')" style="font-size: 40px">🦜</button> 
-<button onclick="playy('mcdonalds.mp3')" style="font-size: 40px">〽️</button>
+<button onclick="playy('audio/violin-screech-sound-effect-made-with-Voicemod.mp3')" style="font-size: 40px">🎻</button>
+<button onclick="playy('audio/vine-boom.mp3')" style="font-size: 40px">🗿</button>
+<button onclick="playy('audio/huh.mp3')" style="font-size: 30px">huh</button>
+<button onclick="playy('audio/hello.mp3')" style="font-size: 40px">🦜</button> 
+<button onclick="playy('audio/mcdonalds.mp3')" style="font-size: 40px">〽️</button>
