@@ -8,6 +8,7 @@ console.log(commits)
 //console.log('committed today')
 //console.log()
 const committers = new Set(commits.map(commit => commit.author?.login))
+committers.add('SheepTester')
 const everyone = Array.from(
   fs.readFileSync('README.md', 'utf-8').matchAll(/\(https:\/\/github.com\/([\w-]+)\/?\)/g),
   ([, username]) => username
