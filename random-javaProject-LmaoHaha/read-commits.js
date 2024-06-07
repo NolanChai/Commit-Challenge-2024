@@ -9,11 +9,12 @@ console.log(commits)
 //console.log()
 const committers = new Set(commits.map(commit => commit.author?.login))
 committers.add('SheepTester')
+committers.add('sprestrelski')
 const everyone = Array.from(
   fs.readFileSync('README.md', 'utf-8').matchAll(/\(https:\/\/github.com\/([\w-]+)\/?\)/g),
   ([, username]) => username
 )
-const noCommit = everyone.filter(user => !committers.has(user) && user !== "sprestrelski").sort().map(u => `${AT}${u}`)
+const noCommit = everyone.filter(user => !committers.has(user)).sort().map(u => `${AT}${u}`)
 
 fs.writeFileSync('issuemsg.txt', [
   // `these people have committed already: ${[...committers].join(', ')}`,
