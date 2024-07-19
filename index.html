@@ -77,6 +77,15 @@
         <span style="padding: 5px;border-radius:2px;background-color:FDD835;">AD</span>
         Are you tired of sitting in the dark? Try the PHILIPS FC12T9/COOL WHITEPLUS 32 WATT now!
     </div>
+    <modal></modal>
+    <dialog id=dialoguement>
+        <form method="dialog">
+            <p>This site uses cookies. Visit our cookies policy page or click the link in any footer for more information and to change your preferences.</p>
+
+<button>Accept all cookies</button>
+<button>Accept </button>
+        </form>
+    </dialog>
 <script>
     window.onload = function() {
         fetch('alias.txt')
@@ -119,6 +128,7 @@
         }
         return author;
     }
+    dialoguement.showModal()
 </script>
 
 </body>
